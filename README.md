@@ -1,9 +1,15 @@
 ## DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features(CVPR 2026)    
 [Jingyi Xu](https://github.com/JingyiXu404), [Meisong Zheng](https://github.com/tszssong), Ying Chen, [Minglang Qiao](https://github.com/MinglangQiao), Xin Deng, Mai Xu, "DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features", CVPR, 2026  
 [arxiv](https://arxiv.org/abs/2511.16928)  
+
+---
+
 **Abstract:** Diffusion model (DM) based Video Super-Resolution (VSR) approaches achieve impressive perceptual quality. However, existing DM-based VSR methods over-prioritize perceptual synthesis while neglecting fidelity gains from accurate alignment and sufficient compensation. In this paper, within the DM-based VSR pipeline, we revisit the role of
 alignment and compensation between adjacent video frames and reveal two crucial observations: (a) the feature domain is better suited than the pixel domain for information compensation due to its stronger spatial and temporal correlations, and (b) warping at an upscaled resolution better preserves high-frequency information, but this benefit is not necessarily monotonic. Therefore, we propose a novel Densely Guided diffusion model with Aligned Features for Video Super-Resolution (DGAF-VSR), with an Optical Guided Warping Module (OGWM) to maintain highfrequency details in the aligned features and a Featurewise Temporal Condition Module (FTCM) to deliver dense guidance in the feature domain. Extensive experiments on synthetic and real-world datasets demonstrate that DGAFVSR surpasses state-of-the-art methods in key aspects of VSR, including perceptual quality (35.82% DISTS reduction), fidelity (0.20 dB PSNR gain), and temporal consistency (30.37% tLPIPS reduction).  
 ![pic](assets/framework.jpg)  
+
+---
+
 ### Test   
 #### prepare  
 Download the pretrained models: 
@@ -25,8 +31,10 @@ PSNR: 28.17, SSIM: 0.804, LPIPS: 0.095, DISTS: 0.043, MUSIQ: 67.9, CLIP: 0.429, 
 020: PSNR=27.087, SSIM=0.813, LPIPS=0.099, DISTS=0.039, MUSIQ=66.301, CLIP=0.379, NIQE=2.386, tLPIPS=3.096, tOF=1.914 
 ```      
 - Tesla V100-32G Overhead:   
+```
 Memory: 16572MiB / 32510MiB   
 Time Cost: 100%|███████████████████████| 5000/5000 [37:07<00:00,  2.24it/s]  
+```
 #### Vid4  
 ```
 sh test_vid4.sh  
@@ -40,8 +48,11 @@ foliage: PSNR=23.264, SSIM=0.6046, LPIPS=0.1935, DISTS=0.1241, MUSIQ=68.4496, CL
 walk: PSNR=27.585, SSIM=0.8384, LPIPS=0.1028, DISTS=0.0825, MUSIQ=64.9557, CLIP=0.3444, NIQE=2.9702, tLPIPS=18.0485, tOF=1.4180   
 ``` 
 - Tesla V100-32G Overhead:   
+```
 Memory: 9684MiB / 32510MiB   
-100%|██████████████████████████████| 2050/2050 [07:30<00:00,  4.55it/s]    
+Time Cost: 100%|███████████████████████| 2050/2050 [07:30<00:00,  4.55it/s]    
+```
+---
 ### Enverionment   
 ```
 conda create -n diffusers python=3.9 -y
@@ -53,6 +64,7 @@ pip install -r requirements.txt
 cd ../..
 pip install -e .  
 ```
+---
 ### Citation  
 If you find the code helpful in your research or work, please cite the following paper(s).
 ```
@@ -66,5 +78,6 @@ If you find the code helpful in your research or work, please cite the following
       url={https://arxiv.org/abs/2511.16928}, 
 }
 ```
+---
 ### Acknowledgement  
 This code is based on [diffusers](https://github.com/huggingface/diffusers), [BrushNet](https://github.com/TencentARC/BrushNet) ,and [StableVSR](https://github.com/claudiom4sir/StableVSR). Thanks for their awesome work.
