@@ -1,0 +1,36 @@
+dataset:
+  train:
+    dataroot_gt: /mnt/nfs0/hanzhang/data/ll/NTIRE22/track3/gt # path to GT (e.g., 000, 001, 002 ... )
+    dataroot_lq: /mnt/nfs0/hanzhang/data/ll/NTIRE22/track3/lq # path to bicubic (e.g., 000, 001, 002 ... )
+    meta_info_file: /mnt/nfs0/hanzhang/data/ll/NTIRE22/track3/gt_meta_info.txt
+    dataroot_flow:
+    io_backend:
+      type: disk
+    num_frame: 3
+    val_partition: 'NTIRE22SELF'
+    test_mode: False
+    interval_list: [1]
+    random_reverse: False
+    gt_size: 256
+    use_hflip: True
+    use_rot: False
+    scale: 4
+    remove_partition: True
+  test:
+    # dataroot_gt: /home/crota/Datasets/REDS/test/gt/
+    # dataroot_lq: /home/crota/Datasets/REDS/test/bicubic/
+    # meta_info_file: /home/crota/Datasets/REDS/test/metadata.txt
+    dataroot_gt: /home/crota/Datasets/REDS/test/gt/
+    dataroot_lq: /home/crota/Datasets/REDS/test/bicubic/
+    meta_info_file: /home/crota/Datasets/REDS/test/metadata.txt
+    io_backend:
+      type: disk
+    num_frame: 3
+    val_partition: 'REDS4'
+    test_mode: True
+    interval_list: [1]
+    random_reverse: False
+    gt_size: 256
+    use_hflip: False
+    use_rot: False
+    scale: 4

@@ -1,5 +1,6 @@
 ## DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features(CVPR 2026)    
-[Jingyi Xu](https://github.com/JingyiXu404), [Meisong Zheng](https://github.com/tszssong), Ying Chen, [Minglang Qiao](https://github.com/MinglangQiao), Xin Deng, Mai Xu, "DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features", CVPR, 2026  
+[Jingyi Xu](https://github.com/JingyiXu404)<sup>1,2, *</sup>, [Meisong Zheng](https://github.com/tszssong)<sup>2, *</sup>, Ying Chen<sup>2,+</sup>, [Minglang Qiao](https://github.com/MinglangQiao)<sup>1, Xin Deng<sup>1,+</sup>, Mai Xu<sup>1, "DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features", CVPR, 2026  
+<sup>1</sup>Beihang University, <sup>2</sup>Alibaba Group - Taobao & Tmall Group
 [arxiv](https://arxiv.org/abs/2511.16928)  
 
 ---
@@ -32,7 +33,7 @@ PSNR: 28.17, SSIM: 0.804, LPIPS: 0.095, DISTS: 0.043, MUSIQ: 67.9, CLIP: 0.429, 
 ```      
 - Tesla V100-32G Overhead:   
 ```
-Memory: 16572MiB / 32510MiB   
+GPU Memory: 16572MiB / 32510MiB   
 Time Cost: 100%|███████████████████████| 5000/5000 [37:07<00:00,  2.24it/s]  
 ```
 #### Vid4  
@@ -49,10 +50,27 @@ walk: PSNR=27.585, SSIM=0.8384, LPIPS=0.1028, DISTS=0.0825, MUSIQ=64.9557, CLIP=
 ``` 
 - Tesla V100-32G Overhead:   
 ```
-Memory: 9684MiB / 32510MiB   
+GPU Memory: 9684MiB / 32510MiB   
 Time Cost: 100%|███████████████████████| 2050/2050 [07:30<00:00,  4.55it/s]    
 ```
 ---
+### Train
+```
+sh train_reds.sh
+```
+- Tesla V100-32G Overhead:
+```
+GPU Memory: 19252MiB / 32510MiB  
+Time Cost:  
+Epoch 0: GS 0, Steps: 832it [17:46,  1.28s/it, loss=0.14, lr=5e-5]  
+Epoch 1: GS 832, Steps: 832it [17:45,  1.28s/it, loss=0.151, lr=5e-5]  
+Epoch 2: GS 1664, Steps: 832it [17:47,  1.28s/it, loss=0.183, lr=5e-5]
+Epoch 3: GS 2496, Steps: 832it [17:48,  1.28s/it, loss=0.145, lr=5e-5]  
+Epoch 4: GS 3328, Steps: 832it [17:47,  1.28s/it, loss=0.169, lr=5e-5]   
+Epoch 5: GS 4160, Steps: 832it [17:47,  1.28s/it, loss=0.162, lr=5e-5]  
+Epoch 6: GS 4992, Steps:  78%|███████████████  | 651/831 [13:55<03:50,  1.28s/it, loss=0.135, lr=5e-5] 
+``` 
+--- 
 ### Enverionment   
 ```
 conda create -n diffusers python=3.9 -y
@@ -80,4 +98,4 @@ If you find the code helpful in your research or work, please cite the following
 ```
 ---
 ### Acknowledgement  
-This code is based on [diffusers](https://github.com/huggingface/diffusers), [BrushNet](https://github.com/TencentARC/BrushNet) ,and [StableVSR](https://github.com/claudiom4sir/StableVSR). Thanks for their awesome work.
+This code is based on [BrushNet](https://github.com/TencentARC/BrushNet), [StableVSR](https://github.com/claudiom4sir/StableVSR), and [diffusers](https://github.com/huggingface/diffusers). Thanks for their awesome work.
