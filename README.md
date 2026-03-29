@@ -12,9 +12,13 @@ alignment and compensation between adjacent video frames and reveal two crucial 
 
 ### Test   
 #### prepare  
-Download the pretrained models: 
+Put [REDS4](https://seungjunnah.github.io/Datasets/reds.html) & [Vid4](https://seebetter.readthedocs.io/en/latest/dataset_zoo/vid4.html) to the specified loacation, for example:  
 ```
-tar xzf assets.tar.gz
+assets/REDS4/x4/  
+assets/Vid4/Bicubic4xLR/  
+```
+Download the pretrained models [Google Drive-TBD](): 
+```
 mkdir ckpts  
 tar xzf DGAF_VSR.tar.gz -C ckpts 
 ```
