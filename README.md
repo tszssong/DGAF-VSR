@@ -1,6 +1,6 @@
 ## DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features(CVPR 2026)    
-[Jingyi Xu](https://github.com/JingyiXu404)<sup>1,2, *</sup>, [Meisong Zheng](https://github.com/tszssong)<sup>2, *</sup>, Ying Chen<sup>2,+</sup>, [Minglang Qiao](https://github.com/MinglangQiao)<sup>1, Xin Deng<sup>1,+</sup>, Mai Xu<sup>1, "DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features", CVPR, 2026  
-<sup>1</sup>Beihang University, <sup>2</sup>Alibaba Group - Taobao & Tmall Group
+[Jingyi Xu](https://github.com/JingyiXu404)<sup>1,2, *</sup>, [Meisong Zheng](https://github.com/tszssong)<sup>2, *</sup>, Ying Chen<sup>2,+</sup>, [Minglang Qiao](https://github.com/MinglangQiao)<sup>1</sup>, Xin Deng<sup>1,+</sup>, Mai Xu<sup>1</sup>, "DGAF-VSR: Rethinking Diffusion Model-Based Video Super-Resolution: Leveraging Dense Guidance from Aligned Features", CVPR, 2026  
+<sup>1</sup>Beihang University, <sup>2</sup>Alibaba Group - Taobao & Tmall Group  
 [arxiv](https://arxiv.org/abs/2511.16928)  
 
 ---
